@@ -1,0 +1,45 @@
+package student;
+
+public class Student {
+
+    //fields for each student
+    String name = ""; 
+    String sid = ""; 
+    double gpa = -1; 
+    int numberOfHours = -1; 
+    
+    //getters and setters
+    String getName() {
+        return name; 
+    } 
+    void setName(String name) {
+        this.name = name; 
+    } 
+    String getSid() {
+        return sid; 
+    } 
+    void setSid(String sid) {
+        char firstLetter = sid.charAt(0); 
+        if (firstLetter != ' ' && firstLetter != '0')
+            this.sid = sid; 
+    }
+    double getGpa() {
+        return gpa;
+    }
+    void setGpa(double gpa) {
+        if (gpa >= 0 && gpa <= 4)
+            this.gpa = gpa;
+    } 
+    int getNumberOfHours() {
+        return numberOfHours; 
+    } 
+    void setNumberOfHours(int numberOfHours) {
+        if (numberOfHours >= 0) 
+            this.numberOfHours = numberOfHours; 
+    } 
+    
+    //toString
+    public String toString() { 
+        return "Student Name: "+getName()+"\n\tStudent ID: "+getSid()+" GPA: "+getGpa()+" Number of Hours: "+getNumberOfHours();
+    }
+}
