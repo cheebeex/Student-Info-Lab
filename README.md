@@ -1,2 +1,2 @@
 # Student-Info-Lab
-Collect and validate student information 
+Collect and validate student information in Java
